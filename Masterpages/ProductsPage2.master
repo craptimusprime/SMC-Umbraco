@@ -1,0 +1,292 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" CodeFile="~/Masterpages/ProductsPage.master.cs" Inherits="Masterpages_ProductsPage" %>
+
+<asp:Content ContentPlaceHolderID="cpBody" runat="server">
+
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+            <div id="main" class="category m-all t-all d-all cf" role="main">
+
+                <div class="intro cf">
+
+                    <h1><%= umbracoHelper.Field("productsHeaderTitle").ToHtmlString() %></h1>
+
+                    <%= umbracoHelper.Field("productsHeaderText").ToHtmlString() %>
+
+                </div>
+
+                <div id="catTabs">
+
+                    <div class="flipout">
+                    <div class="foc-main">
+                    <p>22&#176;C</p>
+                    <small>It's Pretty Hot</small>
+                    <small>Hover to see more</small>
+                    </div>
+                    <div class="foc-left">
+                    <p>40&#176;C</p>
+                    <small>Tomorrow is even worse.</small>
+                    </div>
+                    <div class="foc-left">
+                    <p>46&#176;C</p>
+                    <small>The next is even worse.</small>
+                    </div>
+                    <div class="foc-right">
+                    <p>46&#176;C</p>
+                    <small>The next is even worse.</small>
+                    </div>
+                    <div class="foc-right">
+                    <p>50&#176;C</p>
+                    <small>Don't go out.</small>
+                    </div>
+                    <div class="foc-bottom">
+                    <p>50&#176;C</p>
+                    <small>Don't go out.</small>
+                    </div>
+                    <div class="foc-bottom">
+                    <p>50&#176;C</p>
+                    <small>Don't go out.</small>
+                    </div>
+                    </div>
+
+                    <!-- <div class="cat-block">
+
+                        <h2>Actuators</h2>
+
+                        <div class="flipout">
+                            <div class="foc-main">
+                                <a href="/products/Actuators/"><img class="cat-image" src="/images/img-products-actuators.jpg" alt="Actuators" /></a>
+                                <h3><a href="/products/Actuators/">Actuators</a></h3>
+                            </div>
+                            <ul class="cat-list foc-bottom">
+                                <li><a href="/products/Actuators/Linear-Actuators~53351">Linear Actuators</a></li>
+                                <li><a href="/products/Actuators/Grippers-Escapements~20234">Grippers &amp; Escapements</a></li>
+                                <li><a href="/products/Actuators/Guided-Actuators~19962">Guided Actuators</a></li>
+                                <li><a href="/products/Actuators/Rotary-Actuators~20108">Rotary Actuators</a></li>
+                                <li><a href="/products/Actuators/Rodless-Actuators~20740">Rodless Actuators</a></li>
+                                <li><a href="/products/Actuators/Specialty-Actuators~20386">Specialty Actuators</a></li>
+                                <li><a href="/products/Actuators/Actuator-Accessories~20666">Actuator Accessories</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Directional Control Valves</h2>
+                        <div>
+                            <a href="/products/Directional-Control-Valves/"><img class="cat-image" src="/images/img-products-valves.jpg" alt="Directional Control Valves" /></a>
+                            <h3><a href="/products/Directional-Control-Valves/">Directional Control Valves</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Directional-Control-Valves/4--5-Port-Pilot-Solenoid~27518">Pilot Operated 4/5 Port Solenoid Valves</a></li>
+                                <li><a href="/products/Directional-Control-Valves/3-Port-Pilot-Solenoid~27250">Pilot Operated 3 Port Solenoid Valves</a></li>
+                                <li><a href="/products/Directional-Control-Valves/Direct-Operated-Solenoid~27132">Direct Operated 3/4/5 Port Solenoid Valves</a></li>
+                                <li><a href="/products/Directional-Control-Valves/Fieldbus-System~38806">Reduced-wiring Fieldbus System</a></li>
+                                <li><a href="/products/Directional-Control-Valves/Air-Operated~28608">Air Operated Valves</a></li>
+                                <li><a href="/products/Directional-Control-Valves/Mechanical--Hand-Operated~28728">Mechanical Valves/Hand Valves</a></li>
+                                <li><a href="/products/Directional-Control-Valves/ISO-Valves~128661">ISO Valves</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Airline Equipment</h2>
+                        <div>
+                            <a href="/products/Airline-Equipment/"><img class="cat-image" src="/images/img-products-airline.jpg" alt="Airline Equipment" /></a>
+                            <h3><a href="/products/Airline-Equipment/">Airline Equipment</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Airline-Equipment/Combination-Units~15652">Combination Units</a></li>
+                                <li><a href="/products/Airline-Equipment/Filters~15732">Filters</a></li>
+                                <li><a href="/products/Airline-Equipment/Regulators~15822">Regulators</a></li>
+                                <li><a href="/products/Airline-Equipment/Lubricators~15910">Lubricators</a></li>
+                                <li><a href="/products/Airline-Equipment/Specialty-Regulators~127718">Specialty Regulators</a></li>
+                                <li><a href="/products/Airline-Equipment/Pressure-Gauges~127781">Pressure Gauges</a></li>
+                                <li><a href="/products/Airline-Equipment/Blow-Guns--Nozzles~16064">Blow Guns &amp; Nozzles</a></li>
+                                <li><a href="/products/Airline-Equipment/Silencers--Exhaust-Cleaners~127801">Silencers &amp; Exhaust Cleaners</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Air Preparation Equipment</h2>
+                        <div>
+                        <a href="/products/Air-Preparation-Equipment/"><img class="cat-image" src="/images/img-products-airprep.jpg" alt="Air Preparation Equipment" /></a>
+                            <h3><a href="/products/Air-Preparation-Equipment/">Air Preparation Equipment</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Air-Preparation-Equipment/Air-Dryers~127896">Air Dryers</a></li>
+                                <li><a href="/products/Air-Preparation-Equipment/Air-Preparation-Filters~127999">Air Preparation Filters</a></li>
+                                <li><a href="/products/Air-Preparation-Equipment/Aftercoolers~127840">Aftercoolers</a></li>
+                                <li><a href="/products/Air-Preparation-Equipment/Auto-Drain-Valves~128045">Auto Drain Valves</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Connectors</h2>
+                        <div>
+                            <a href="/products/Connectors/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Connectors/">Connectors</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Connectors/Fittings~21907">Fittings</a></li>
+                                <li><a href="/products/Connectors/Speed-Controllers~22159">Speed Controllers</a></li>
+                                <li><a href="/products/Connectors/Tubing~22059">Tubing</a></li>
+                                <li><a href="/products/Connectors/Manifolds~21837">Manifolds</a></li>
+                                <li><a href="/products/Connectors/Quick-Couplers~127562">Quick Couplers</a></li>
+                                <li><a href="/products/Connectors/Accessories~21885">Accessories</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Electric Actuators</h2>
+                        <div>
+                            <a href="/products/Electric-Actuators/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Electric-Actuators/">Electric Actuators</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Electric-Actuators/Sliders~125678">Sliders</a></li>
+                                <li><a href="/products/Electric-Actuators/AC-Servo-Sliders~125698">AC Servo Sliders</a></li>
+                                <li><a href="/products/Electric-Actuators/Rod-Guided-Rod~125716">Rod &amp; Guided Rod</a></li>
+                                <li><a href="/products/Electric-Actuators/AC-Servo-Rod~125730">AC Servo Rod</a></li>
+                                <li><a href="/products/Electric-Actuators/Slide-Tables~125742">Slide Tables</a></li>
+                                <li><a href="/products/Electric-Actuators/Rotary~125756">Rotary</a></li>
+                                <li><a href="/products/Electric-Actuators/Grippers~125762">Grippers</a></li>
+                                <li><a href="/products/Electric-Actuators/Miniature~125772">Miniature</a></li>
+                                <li><a href="/products/Electric-Actuators/Controllers-Drivers~125783">Controllers &amp; Drivers</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Vacuum Products</h2>
+                        <div>
+                            <a href="/products/Vacuum-Products/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Vacuum-Products/">Vacuum Products</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Vacuum-Products/Suction-Cups~29303">Suction Cups</a></li>
+                                <li><a href="/products/Vacuum-Products/Vacuum-Ejectors~29411">Vacuum Ejectors</a></li>
+                                <li><a href="/products/Vacuum-Products/Vacuum-Filters~29297">Vacuum Filters</a></li>
+                                <li><a href="/products/Vacuum-Products/Vacuum-Switches~29361">Vacuum Switches</a></li>
+                                <li><a href="/products/Vacuum-Products/Vacuum-Regulators~29395">Vacuum Regulators</a></li>
+                                <li><a href="/products/Vacuum-Products/Noncontact-Pads~37926">Non-contact Pads</a></li>
+                                <li><a href="/products/Vacuum-Products/Adsorption-Plate~51946">Adsorption Plate</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Sensors &amp; Switches</h2>
+                        <div>
+                            <a href="/products/Sensors-Switches/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Sensors-Switches/">Sensors &amp; Switches</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Sensors-Switches/Electronic-Regulator~22816">Electronic Regulator</a></li>
+                                <li><a href="/products/Sensors-Switches/Pressure-Switches~22836">Pressure Switches</a></li>
+                                <li><a href="/products/Sensors-Switches/Vacuum-Switches~22944">Vacuum Switches</a></li>
+                                <li><a href="/products/Sensors-Switches/Flow-Switches~22990">Flow Switches</a></li>
+                                <li><a href="/products/Sensors-Switches/Positioners~36095">Positioners</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Fluid Process Valves</h2>
+                        <div>
+                            <a href="/products/Fluid-Process-Valves/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Fluid-Process-Valves/">Fluid Process Valves</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Fluid-Process-Valves/General-Purpose-Air-Water~127055">General Purpose Air &amp; Water</a></li>
+                                <li><a href="/products/Fluid-Process-Valves/Oil-High-Temp-Oil~127057">Oil &amp; High Temp. Oil</a></li>
+                                <li><a href="/products/Fluid-Process-Valves/Steam-Heated-Water~127059">Steam &amp; Heated Water</a></li>
+                                <li><a href="/products/Fluid-Process-Valves/Specialized-Application~127061">Specialized Application</a></li>
+                                <li><a href="/products/Fluid-Process-Valves/Chemical-Pure-Water~127063">Chemical &amp; Pure Water</a></li>
+                                <li><a href="/products/Fluid-Process-Valves/Coolant~127065">Coolant</a></li>
+                                <li><a href="/products/Fluid-Process-Valves/Dust-Collector~127067">Dust Collector</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Static Control</h2>
+                        <div>
+                            <a href="/products/Static-Control/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Static-Control/">Static Control</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Static-Control/Bar-Ionizers~126264">Bar Ionizers</a></li>
+                                <li><a href="/products/Static-Control/Nozzle-Ionizers~126266">Nozzle Ionizers</a></li>
+                                <li><a href="/products/Static-Control/Fan-Ionizers~126268">Fan Ionizers</a></li>
+                                <li><a href="/products/Static-Control/Sensors~126270">Sensors</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Temperature Control</h2>
+                        <div>
+                            <a href="/products/Temperature-Control/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Temperature-Control/">Temperature Control</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Temperature-Control/General-Use-Compact-Chiller~126798">General Use Compact Chiller</a></li>
+                                <li><a href="/products/Temperature-Control/High-Capacity-Chiller~126800">High Capacity Chiller</a></li>
+                                <li><a href="/products/Temperature-Control/High-Capacity-Heat-Exchanger~126806">High Capacity Heat Exchanger</a></li>
+                                <li><a href="/products/Temperature-Control/High-Technology-Chiller~126804">High Technology Chiller</a></li>
+                                <li><a href="/products/Temperature-Control/Economy-High-Capacity-Chiller~126802">Economy High Capacity Chiller</a></li>
+                                <li><a href="/products/Temperature-Control/Circulating-Bath~126808">Circulating Bath</a></li>
+                                <li><a href="/products/Temperature-Control/Benchtop-Precision-Chiller~126852">Benchtop Precision Chiller</a></li>
+                                <li><a href="/products/Temperature-Control/Benchtop-Chemical-Chiller~126850">Benchtop Chemical Chiller</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="cat-block">
+
+                        <h2>Specialty Equipment</h2>
+                        <div>
+                            <a href="/products/Specialty-Equipment/"><img class="cat-image" src="http://placehold.it/300x150" alt="Temp Image" /></a>
+                            <h3><a href="/products/Specialty-Equipment/">Specialty Equipment</a></h3>
+                            <ul class="cat-list">
+                                <li><a href="/products/Specialty-Equipment/Clean-Room-Products~23399">Clean Room Products</a></li>
+                                <li><a href="/products/Specialty-Equipment/High-Purity-Products~23473">High Purity Products</a></li>
+                                <li><a href="/products/Specialty-Equipment/High-Vacuum-Products~23443">High Vacuum Products</a></li>
+                                <li><a href="/products/Specialty-Equipment/Process-Pumps~23423">Process Pumps</a></li>
+                                <li><a href="/products/Specialty-Equipment/Process-Valves~87847">Process Valves</a></li>
+                                <li><a href="/products/Specialty-Equipment/Industrial-Filters~45236">Industrial Filters</a></li>
+                            </ul>
+                        </div>
+
+                    </div> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/scripts/libs/jquery.flipout_cards.js"></script>
+
+</asp:Content>

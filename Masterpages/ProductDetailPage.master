@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/InteriorFilterMaster.master" AutoEventWireup="true" CodeFile="~/Masterpages/ProductDetailPage.master.cs" Inherits="Masterpages_ProductDetailPage" %>
+
+<%@ Register Src="~/UserControls/uc_Breadcrumbs.ascx" TagPrefix="uc1" TagName="uc_Breadcrumbs" %>
+
+
+<asp:Content ContentPlaceHolderID="cpHead" runat="server">
+
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/common.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/constraintengine.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/constraintuisupport.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/messageengine.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/smc_app_constraint_interface.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/standard_util.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/standard_dom_util.js"></script>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/standard_app_constraint_interface.js"></script>
+    <script type="text/javascript" src="/scripts/smc_na_app_constraint_interface.js"></script>
+    <%--<script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/smc_na_app_constraint_interface.js"></script>--%>
+    <script type="text/javascript" src="http://content2.smcetech.com/image/GTAP/scripts/model_window.js"></script>
+
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cpMain" runat="server">
+
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <div id="main" class="product m-all t-all d-3of4 cf" role="main">
+        <uc1:uc_Breadcrumbs runat="server" ID="uc_Breadcrumbs" />
+
+        <h1 class="product-title"><%= _bc.name %></h1>
+
+        <img class="product-image bigpict" src='//content2.smcetech.com/image/large/<%= _bc.imageL %>' alt='<%= _bc.name %>' />
+
+        <a class="description-btn" href="">Show Description</a>
+
+        <div class="description-text">
+
+            <%= (Server.HtmlDecode(_bc.description).Trim().StartsWith("<p>")) ? Server.HtmlDecode(_bc.description) : "<p>" + Server.HtmlDecode(_bc.description) + "</p>" %>
+
+            <%= Server.HtmlDecode(_bc.bullets) %>
+
+        </div>
+
+        <form action="prodtree_product_2.cfm?cc_nvl=((save,1),(logEnable,NO),(catalogCode,smc),(lineCode,ACT_US),(productCode,2032))" method="post" enctype="application/x-www-form-urlencoded (default)" name="form" id="form">
+
+            <div id="config">
+
+                <div class="table-responsive">
+
+                    <%= Server.HtmlDecode(_bc.configurableData.partNumberHTML) %>
+
+                </div>
+
+            </div>
+
+            <div id="options">
+
+                <h2>Product Options</h2>
+
+                <%= Server.HtmlDecode(_bc.configurableData.optionSelectHTML) %>
+
+            </div>
+
+            <div id="productTabs">
+
+                <div id="downloads" class="product-block">
+
+                    <h2>Downloads</h2>
+
+                    <div>
+
+                        <div class="col left">
+                            <h3>CAD Downloads</h3>
+                            <a class="blue-btn icon-btn" href=""><i class="download"></i>Download CAD File</a>
+                            <h3>View CAD Models</h3>
+                            <a class="blue-btn icon-btn" href=""><i class="download"></i>View 3D Model</a>
+                            <a class="blue-btn icon-btn" href=""><i class="download"></i>View 2D Model</a>
+                        </div>
+
+                        <div class="col center">
+                            <h3>Product Catalog</h3>
+                            <a class="blue-btn icon-btn" href=""><i class="pdf"></i>Series Catalog</a>
+                        </div>
+
+                        <div class="col right">
+                            <h3>Related Files &amp; Favorites</h3>
+                            <a class="blue-btn icon-btn" href="javascript:waitCursor(true);saveItem();"><i class="favs"></i>Add to Favorites</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="related" class="product-block">
+
+                    <h2>Related Products</h2>
+
+                    <div>
+
+                        <div id="relatedTabs">
+
+                            <asp:Literal ID="litRelatedTabs" runat="server"></asp:Literal>
+
+                            <asp:Literal ID="litRelatedTabDivs" runat="server"></asp:Literal>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <script type="text/javascript">
+                function InitAll() {
+                    Init();
+                    populatechoices();
+                }
+
+
+                function populatechoices() {
+                    var locate = new String(window.location);
+                    var dropdownselect = locate.split("|");
+                    var domainpopulate = "";
+                    var domainpopulateid = "";
+                    var domainpopulatevalue = "";
+                    var domainpopulateselect = "";
+
+                    for (i = 1; i < dropdownselect.length; i++) {
+                        domainpopulate = dropdownselect[i].split("=");
+                        domainpopulateselect = document.getElementById(domainpopulate[0]);
+                        domainpopulateid = domainpopulate[0].replace("dom_", "");
+                        domainpopulatevalue = domainpopulate[1];
+
+                        for (j = 0; j < domainpopulateselect.length; j++) {
+                            if (domainpopulateselect.options[j].value == domainpopulatevalue) {
+                                domainpopulateselect.options[j].selected = true;
+                            }
+                        }
+                        oDomains.setDomain(domainpopulateid, domainpopulatevalue, Domain.UserSet);
+
+                    }
+                    formChange = customFormChange;
+                    formChange(0);
+                }
+            </script>
+
+            <script type="text/javascript">
+                window.onload = InitAll;
+            </script>
+
+
+            <script type="text/javascript">
+                <%= Server.HtmlDecode(_bc.configurableData.jsInitConfig) %>
+            </script>
+
+        </form>
+    </div>
+
+</asp:Content>

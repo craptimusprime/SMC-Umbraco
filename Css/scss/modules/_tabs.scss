@@ -1,0 +1,33 @@
+﻿/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: Responsive Tabs Stylesheet
+******************************************************************/
+
+/*********************
+TABS STYLES
+*********************/
+
+.resp-tabs-list {
+    display: none;
+}
+
+.resp-tabs-container {
+    background: $white;
+
+    h2 {
+        padding: 10px 5%;
+        border-top: solid 1px $border-color;
+    }
+
+}
+
+.resp-tab-content {
+    display: none;
+}
+
+/*********************
+ACCORDION STYLES
+*********************/
+

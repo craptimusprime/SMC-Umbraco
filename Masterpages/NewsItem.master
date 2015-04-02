@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+
+
+<asp:Content ContentPlaceHolderID="cpHead" runat="server">
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <meta name="description" content="<%= umbracoHelper.Field("metaDescription").ToString() %>" />
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cpBody" runat="server">
+
+    
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+            <div id="main" class="interior m-all t-2of3 d-2of3 cf" role="main">
+
+                <%= umbracoHelper.Field("newsItemBodyText").ToHtmlString() %>
+
+            </div>
+
+            <div id="sidebar" class="sidebar m-all t-1of3 d-1of3 cf" role="complementary">
+
+                <h2><%= umbracoHelper.Field("contentPageSideBarHeader") %></h2>
+
+                <%= umbracoHelper.Field("contentPageSideBarContent").ToHtmlString() %>
+
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>

@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" CodeFile="~/Masterpages/InteriorFilterMaster.master.cs" Inherits="Masterpages_InteriorFilterMaster" %>
+
+<asp:Content ContentPlaceHolderID="cpHead" runat="server">
+    <asp:ContentPlaceHolder ID="cpHead" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cpBody" runat="server">
+
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+                <asp:ContentPlaceHolder ID="cpMain" runat="server">
+                </asp:ContentPlaceHolder>
+
+            <div id="sidebar" class="sidebar m-all t-all d-1of4 cf" role="complementary">
+
+                <div class="col left">
+
+                    <div id="sidebar-nav">
+
+                        <h2>Products</h2>
+                        <ul>
+                            <li class="dropdown"><a>Actuators</a>
+                                <ul>
+                                    <li class="active-category"><a href="/products/Actuators/Linear-Actuators~53351">Linear Actuators</a></li>
+                                    <li><a href="/products/Actuators/Grippers-Escapements~20234">Grippers &amp; Escapements</a></li>
+                                    <li><a href="/products/Actuators/Guided-Actuators~19962">Guided Actuators</a></li>
+                                    <li><a href="/products/Actuators/Rotary-Actuators~20108">Rotary Actuators</a></li>
+                                    <li><a href="/products/Actuators/Rodless-Actuators~20740">Rodless Actuators</a></li>
+                                    <li><a href="/products/Actuators/Specialty-Actuators~20386">Specialty Actuators</a></li>
+                                    <li><a href="/products/Actuators/Actuator-Accessories~20666">Actuator Accessories</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Directional Control Valves</a>
+                                <ul>
+                                    <li><a href="/products/Directional-Control-Valves/4--5-Port-Pilot-Solenoid~27518">Pilot Operated 4/5 Port Solenoid Valves</a></li>
+                                    <li><a href="/products/Directional-Control-Valves/3-Port-Pilot-Solenoid~27250">Pilot Operated 3 Port Solenoid Valves</a></li>
+                                    <li><a href="/products/Directional-Control-Valves/Direct-Operated-Solenoid~27132">Direct Operated 3/4/5 Port Solenoid Valves</a></li>
+                                    <li><a href="/products/Directional-Control-Valves/Fieldbus-System~38806">Reduced-wiring Fieldbus System</a></li>
+                                    <li><a href="/products/Directional-Control-Valves/Air-Operated~28608">Air Operated Valves</a></li>
+                                    <li><a href="/products/Directional-Control-Valves/Mechanical--Hand-Operated~28728">Mechanical Valves/Hand Valves</a></li>
+                                    <li><a href="/products/Directional-Control-Valves/ISO-Valves~128661">ISO Valves</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Airline Equipment</a>
+                                <ul>
+                                    <li><a href="/products/Airline-Equipment/Combination-Units~15652">Combination Units</a></li>
+                                    <li><a href="/products/Airline-Equipment/Regulators~15822">Regulators</a></li>
+                                    <li><a href="/products/Airline-Equipment/Filters~15732">Filters</a></li>
+                                    <li><a href="/products/Airline-Equipment/Lubricators~15910">Lubricators</a></li>
+                                    <li><a href="/products/Airline-Equipment/Dryers~16024">Dryers</a></li>
+                                    <li><a href="/products/Airline-Equipment/Precision-Regulator~15904">Precision Regulator</a></li>
+                                    <li><a href="/products/Airline-Equipment/Parts-Accessories~15990">Parts &amp; Accessories</a></li>
+                                    <li><a href="/products/Airline-Equipment/Miscellaneous-Equipment~15960">Miscellaneous Equipment</a></li>
+                                    <li><a href="/products/Airline-Equipment/Nozzles~16064">Nozzles</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Air Preparation Equipment</a>
+                                <ul>
+                                    <li><a href="/products/Air-Preparation-Equipment/Air-Dryers~127896">Air Dryers</a></li>
+                                    <li><a href="/products/Air-Preparation-Equipment/Air-Preparation-Filters~127999">Air Preparation Filters</a></li>
+                                    <li><a href="/products/Air-Preparation-Equipment/Aftercoolers~127840">Aftercoolers</a></li>
+                                    <li><a href="/products/Air-Preparation-Equipment/Auto-Drain-Valves~128045">Auto Drain Valves</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Connectors</a>
+                                <ul>
+                                    <li><a href="/products/Connectors/Fittings~21907">Fittings</a></li>
+                                    <li><a href="/products/Connectors/Speed-Controllers~22159">Speed Controllers</a></li>
+                                    <li><a href="/products/Connectors/Tubing~22059">Tubing</a></li>
+                                    <li><a href="/products/Connectors/Manifolds~21837">Manifolds</a></li>
+                                    <li><a href="/products/Connectors/Accessories~21885">Accessories</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Electric Actuators</a>
+                                <ul>
+                                    <li><a href="/products/Electric-Actuators/Sliders~125678">Sliders</a></li>
+                                    <li><a href="/products/Electric-Actuators/AC-Servo-Sliders~125698">AC Servo Sliders</a></li>
+                                    <li><a href="/products/Electric-Actuators/Rod-Guided-Rod~125716">Rod &amp; Guided Rod</a></li>
+                                    <li><a href="/products/Electric-Actuators/AC-Servo-Rod~125730">AC Servo Rod</a></li>
+                                    <li><a href="/products/Electric-Actuators/Slide-Tables~125742">Slide Tables</a></li>
+                                    <li><a href="/products/Electric-Actuators/Rotary~125756">Rotary</a></li>
+                                    <li><a href="/products/Electric-Actuators/Grippers~125762">Grippers</a></li>
+                                    <li><a href="/products/Electric-Actuators/Miniature~125772">Miniature</a></li>
+                                    <li><a href="/products/Electric-Actuators/Controllers-Drivers~125783">Controllers &amp; Drivers</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Vacuum Products</a>
+                                <ul>
+                                    <li><a href="/products/Vacuum-Products/Suction-Cups~29303">Suction Cups</a></li>
+                                    <li><a href="/products/Vacuum-Products/Vacuum-Ejectors~29411">Vacuum Ejectors</a></li>
+                                    <li><a href="/products/Vacuum-Products/Vacuum-Filters~29297">Vacuum Filters</a></li>
+                                    <li><a href="/products/Vacuum-Products/Vacuum-Switches~29361">Vacuum Switches</a></li>
+                                    <li><a href="/products/Vacuum-Products/Vacuum-Regulators~29395">Vacuum Regulators</a></li>
+                                    <li><a href="/products/Vacuum-Products/Noncontact-Pads~37926">Non-contact Pads</a></li>
+                                    <li><a href="/products/Vacuum-Products/Adsorption-Plate~51946">Adsorption Plate</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Sensors &amp; Switches</a>
+                                <ul>
+                                    <li><a href="/products/Sensors-Switches/Electronic-Regulator~22816">Electronic Regulator</a></li>
+                                    <li><a href="/products/Sensors-Switches/Pressure-Switches~22836">Pressure Switches</a></li>
+                                    <li><a href="/products/Sensors-Switches/Vacuum-Switches~22944">Vacuum Switches</a></li>
+                                    <li><a href="/products/Sensors-Switches/Flow-Switches~22990">Flow Switches</a></li>
+                                    <li><a href="/products/Sensors-Switches/Positioners~36095">Positioners</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Fluid Process Valves</a>
+                                <ul>
+                                    <li><a href="/products/Fluid-Process-Valves/General-Purpose-Air-Water~127055">General Purpose Air &amp; Water</a></li>
+                                    <li><a href="/products/Fluid-Process-Valves/Oil-High-Temp-Oil~127057">Oil &amp; High Temp. Oil</a></li>
+                                    <li><a href="/products/Fluid-Process-Valves/Steam-Heated-Water~127059">Steam &amp; Heated Water</a></li>
+                                    <li><a href="/products/Fluid-Process-Valves/Specialized-Application~127061">Specialized Application</a></li>
+                                    <li><a href="/products/Fluid-Process-Valves/Chemical-Pure-Water~127063">Chemical &amp; Pure Water</a></li>
+                                    <li><a href="/products/Fluid-Process-Valves/Coolant~127065">Coolant</a></li>
+                                    <li><a href="/products/Fluid-Process-Valves/Dust-Collector~127067">Dust Collector</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Static Control</a>
+                                <ul>
+                                    <li><a href="/products/Static-Control/Bar-Ionizers~126264">Bar Ionizers</a></li>
+                                    <li><a href="/products/Static-Control/Nozzle-Ionizers~126266">Nozzle Ionizers</a></li>
+                                    <li><a href="/products/Static-Control/Fan-Ionizers~126268">Fan Ionizers</a></li>
+                                    <li><a href="/products/Static-Control/Sensors~126270">Sensors</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Temperature Control</a>
+                                <ul>
+                                    <li><a href="/products/Temperature-Control/General-Use-Compact-Chiller~126798">General Use Compact Chiller</a></li>
+                                    <li><a href="/products/Temperature-Control/High-Capacity-Chiller~126800">High Capacity Chiller</a></li>
+                                    <li><a href="/products/Temperature-Control/High-Capacity-Heat-Exchanger~126806">High Capacity Heat Exchanger</a></li>
+                                    <li><a href="/products/Temperature-Control/High-Technology-Chiller~126804">High Technology Chiller</a></li>
+                                    <li><a href="/products/Temperature-Control/Economy-High-Capacity-Chiller~126802">Economy High Capacity Chiller</a></li>
+                                    <li><a href="/products/Temperature-Control/Circulating-Bath~126808">Circulating Bath</a></li>
+                                    <li><a href="/products/Temperature-Control/Benchtop-Precision-Chiller~126852">Benchtop Precision Chiller</a></li>
+                                    <li><a href="/products/Temperature-Control/Benchtop-Chemical-Chiller~126850">Benchtop Chemical Chiller</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Specialty Equipment</a>
+                                <ul>
+                                    <li><a href="/products/Specialty-Equipment/Clean-Room-Products~23399">Clean Room Products</a></li>
+                                    <li><a href="/products/Specialty-Equipment/High-Purity-Products~23473">High Purity Products</a></li>
+                                    <li><a href="/products/Specialty-Equipment/High-Vacuum-Products~23443">High Vacuum Products</a></li>
+                                    <li><a href="/products/Specialty-Equipment/Process-Pumps~23423">Process Pumps</a></li>
+                                    <li><a href="/products/Specialty-Equipment/Process-Valves~87847">Process Valves</a></li>
+                                    <li><a href="/products/Specialty-Equipment/Industrial-Filters~45236">Industrial Filters</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <%--<h2>Filter Products</h2>
+                    <form>
+                        <select class="filter"></select>
+                        <select class="subfilter"></select>
+                        <input type="submit" value="Filter" />
+                    </form>--%>
+
+                    <hr />
+
+                </div>
+
+                <div class="col right">
+
+                    <a class="blue-btn icon-btn" href="/contact/distributor-locator/"><i class="distributor"></i>Locate a Distributor</a>
+                    <a class="blue-btn icon-btn" href="/help-support/etools/"><i class="etools"></i>Access eTools</a>
+
+                    <hr />
+
+                    <h3>Favorites</h3>
+                    <p><select class="filter">
+                        <option>View Favorites</option>
+                    </select></p>
+                    <p><label>Customer Part Number</label><br />
+                    <input type="text" name="newUserCode" value="" onkeypress="return eventKeypress(event);"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>

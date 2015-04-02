@@ -1,0 +1,27 @@
+/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: IE Stylesheet
+******************************************************************/
+
+/******************************************************************
+IMPORTS & DEPENDENCIES
+******************************************************************/
+
+@import "partials/variables"; // import variables
+@import "partials/typography"; // import typography
+@import "partials/mixins"; // import mixins
+@import "partials/ie_grid"; // import grid
+
+// import everything inside media queries
+@import "breakpoints/481up";
+@import "breakpoints/600up";
+@import "breakpoints/768up";
+@import "breakpoints/960up";
+@import "breakpoints/1030up";
+@import "breakpoints/1240up";
+
+/******************************************************************
+ADDITIONAL IE FIXES
+******************************************************************/

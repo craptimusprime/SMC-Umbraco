@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="cpHead" ID="Content1" runat="server">
+    <link href="/Css/flexslider.css" rel="stylesheet" />
+
+    <script src="/js/jquery.flexslider.js"></script>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cpBody" ID="Content2" runat="server">
+
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <div id="featured" class="home">
+
+        <div id="inner-featured" class="wrap cf">
+
+            <!-- Start Slider Section -->
+
+            <a id="lnkPrevSlide" class="arrow left" href="#"></a>
+
+            <div class="flexslider" id="slider">
+
+                <%= umbracoHelper.Field("homePageSliders", "", "", "", "", false, false, true).ToHtmlString() %>
+
+            </div>
+
+            <a id="lnkNextSlide" class="arrow right" href="#"></a>
+
+            <script type="text/javascript">
+                jQuery(function () {
+                    jQuery(".flexslider").flexslider({
+                        animation: "slide",
+                        startAt: 1 //flexslider is making first slide show up second this fixes it.
+                    });
+
+                    //mimic flexslider previous click
+                    jQuery("#lnkPrevSlide").click(function (event) {
+                        event.preventDefault();
+                        jQuery(".flex-prev").click();
+                    });
+
+                    //mimic flexslider next click
+                    jQuery("#lnkNextSlide").click(function (event) {
+                        event.preventDefault();
+                        jQuery(".flex-next").click();
+                    });
+                });
+            </script>
+            <!-- End Slider Section -->
+        </div>
+
+    </div>
+
+
+    <div id="content" class="home">
+
+        <div id="inner-content" class="wrap cf">
+
+            <!-- Start Top Left -->
+            <div id="main" class="home m-all t-2of3 d-2of3 cf" role="main">
+
+                <h1><umbraco:Item Field="topLeftHeader" htmlEncode="true" stripParagraph="true" runat="server" /></h1>
+
+                <p><umbraco:Item Field="topLeftBody" htmlEncode="true" stripParagraph="true" convertLineBreaks="false" runat="server" /></p>
+
+                <% if (umbracoHelper.Field("topLeftShowReadMore").ToString().ToLower() == "true") {%>
+                    <p><a href='<%= umbracoHelper.Field("topLeftReadMoreLink")%>'>Read More &#10095;</a></p>
+                <%}%>
+
+            </div>
+            <!-- End Top Left -->
+
+            <!-- Start Sidebar -->
+            <div id="sidebar-home" class="home sidebar m-all t-1of3 d-1of3 last-col cf" role="complementary">
+
+                <%= umbracoHelper.Field("sideBarButtons", "", "", "", "", false, false, true) %>
+
+            </div>
+            <!-- End Sidebar-->
+        </div>
+
+        <div class="block-wrap">
+
+            <div id="content-blocks" class="m-all cf" role="main">
+
+                <div id="homeTabs">
+
+                    <div class="section featured">
+
+                        <h2><%= umbracoHelper.Field("firstColumnHeader") %></h2>
+
+                        <div>
+
+                            <img src='<%= umbracoHelper.Media(umbracoHelper.Field("firstColumnImage").ToString()).Url %>' alt='<%= umbracoHelper.Field("firstColumnAlternateImageText") %>' />
+
+                            <p><umbraco:Item Field="firstColumnBody" htmlEncode="true" stripParagraph="true" runat="server" /></p>
+
+                            <% if (umbracoHelper.Field("firstColumnShowReadMore").ToString().ToLower() == "true") { %>
+                                <p><a href='<%= umbracoHelper.Field("firstColumnReadMoreLink") %>'>Read More &#10095;</a></p>
+                            <% } %>
+
+                        </div>
+
+                    </div>
+
+                    <div class="section practices">
+
+                        <h2><%= umbracoHelper.Field("secondColumnHeader") %></h2>
+
+                        <div>
+
+                            <img src='<%= umbracoHelper.Media(umbracoHelper.Field("secondColumnImage").ToString()).Url %>' alt='<%= umbracoHelper.Field("secondColumnAlternateImageText") %>' />
+
+                            <p><umbraco:Item ID="Item1" Field="secondColumnBody" htmlEncode="true" stripParagraph="true" runat="server" /></p>
+
+                            <% if (umbracoHelper.Field("secondColumnShowReadMore").ToString().ToLower() == "true") { %>
+                                <p><a href='<%= umbracoHelper.Field("secondColumnReadMoreLink") %>'>Read More &#10095;</a></p>
+                            <% } %>
+
+                        </div>
+
+                    </div>
+
+                    <div class="section news last-section">
+
+                        <h2><%= umbracoHelper.Field("thirdColumnHeader") %></h2>
+
+                        <div>
+
+                            <img src='<%= umbracoHelper.Media(umbracoHelper.Field("thirdColumnImage").ToString()).Url %>' alt='<%= umbracoHelper.Field("thirdColumnAlternateImageText") %>' />
+
+                            <p><umbraco:Item ID="Item2" Field="thirdColumnBody" htmlEncode="true" stripParagraph="true" runat="server" /></p>
+
+                            <% if (umbracoHelper.Field("thirdColumnShowReadMore").ToString().ToLower() == "true") { %>
+                                <p><a href='<%= umbracoHelper.Field("thirdColumnReadMoreLink") %>'>Read More &#10095;</a></p>
+                            <% } %>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>

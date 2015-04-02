@@ -1,0 +1,916 @@
+/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: Small Laptop Stylesheet
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+#sitewrap {
+	padding-top : 35px;
+
+	&.sticky {
+		padding-top: 280px;
+	}
+
+}
+
+#container {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.wrap {
+	width: 96%;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+#header {
+	padding-bottom: 0px;
+
+	#logo {
+		float: left;
+		width: 30%;
+		margin: 10px 0;
+
+		img {
+			max-width: 120px;
+		}
+
+		p.slogan {
+			display: block;
+			font-size: 0.8em;
+			color: $smc-blue;
+			margin: 0;
+		}
+
+	}
+
+	#search {
+		float: left;
+		width: 50%;
+		max-width: 700px;
+		font-size: 0.9em;
+		margin: 5px 0;
+
+		form {
+			width: 88%;
+		}
+
+		input[type="text"] {
+			height: 40px;
+		}
+
+		input[type="submit"] {
+			height: 40px;
+		}
+
+	}
+
+	.navbar {
+		display: block;
+		width: 100%;
+		height: 44px;
+		background: $white;
+		border-top: solid 2px $gray;
+	}
+
+	a.login-btn {
+		display: none;
+	}
+
+	#menu {
+		display: none;
+	}
+
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#nav-container {
+	top: 0;
+	z-index: 1000;
+	max-width: 100%;
+	min-height: 36px;
+	overflow: visible;
+
+	.wrap {
+		position: relative;
+		width: 96%;
+	}
+
+	img {
+		display: none;
+	}
+
+	#mainnav {
+		position: absolute;
+		top: 124px;
+		right: 0px;
+		left: 0px;
+		width: 100%;
+		max-width: 1560px;
+		margin: 0 auto;
+
+		li {
+			display: inline-block;
+
+			a {
+				position: relative;
+				font-size: 0.9em;
+				color: $text-color;
+				padding: 15px 10px 14px;
+
+				&:hover, &:active {
+					background: none;
+					color: $smc-blue;
+				}
+
+				&:after {
+					content: '|';
+					position: absolute;
+					top: 13px;
+					right: -4px;
+					color: $gray;
+				}
+
+			}
+
+			&.dropdown {
+
+				a {
+					background: url(/images/menu-vert-arrows.png) no-repeat right -52px;
+					color: $text-color;
+					padding: 15px 30px 14px 10px;
+				}
+
+				&.active {
+
+					> a {
+						background-position: right -2px;
+						color: $smc-blue;
+					}
+
+				}
+
+			}
+
+			&:last-child {
+
+				a:after {
+					content: '';
+				}
+
+			}
+
+			ul.children {
+				display: none;
+				position: absolute;
+				width: 250px;
+				background: $light-gray;
+				white-space: nowrap;
+				text-align: left;
+				margin: 0;
+				padding: 10px 0;
+				@include rounded-corners(0 0 5px 5px);
+				-webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
+				box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
+
+				&.last {
+					margin-left: -160px;
+				}
+
+				li {
+					display: block;
+					width: 250px;
+
+					a {
+						background: none;
+						font-size: 0.9em;
+						color: $text-color;
+						padding: 12px 40px 12px 20px;
+						border-bottom: solid 1px $gray;
+
+						&:hover, &:active {
+							background-color: $white;
+							color: $smc-blue;
+						}
+
+						&:after {
+							content: '';
+						}
+
+						&.no-style {
+							font-size: 0.9em;
+							color: $link-color;
+							padding: 0;
+							border: none;
+
+							&:hover, &:active {
+								color: $link-hover;
+							}
+
+						}
+
+					}
+
+					&.dropdown {
+
+						a {
+							background: url(/images/menu-right-arrows.png) no-repeat right 0px;
+							color: $text-color;
+
+							&:hover, &:active {
+								background-color: $white;
+								background-position: right -40px;
+								color: $smc-blue;
+							}
+
+						}
+
+						&.active {
+
+							a {
+								background-color: $white;
+								background-position: right -40px;
+								color: $smc-blue;
+							}
+
+						}
+
+					}
+
+					&:last-child {
+
+						a {
+							border: none;
+						}
+
+					}
+
+					ul.subchildren {
+						display: none;
+						position: absolute;
+						top: 0px;
+						bottom: 0px;
+						left: 250px;
+						width: 500px;
+						background: $white;
+						margin: 0;
+						padding: 20px;
+						border: solid $gray;
+						border-width: 0 0 0 1px;
+						@include rounded-corners(0 0 5px 0);
+						z-index: 100;
+
+						img.hero {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							display: block;
+							@include rounded-corners(0 0 5px 0);
+						}
+
+						h3 {
+							max-width: 210px;
+							font-size: 1.4em;
+							color: $smc-blue;
+							white-space: normal;
+							margin-bottom: 20px;
+						}
+
+						a.no-style {
+							font-size: 0.9em;
+							color: $link-color;
+							padding: 0;
+							border: none;
+
+							&:hover, &:active {
+								color: $link-hover;
+							}
+
+						}
+
+						li {
+							max-width: 210px;
+							white-space: normal;
+
+							a {
+								display: block;
+								background: none !important;
+								font-size: 0.8em;
+								color: $text-color !important;
+								border: none;
+								padding: 10px 0;
+
+								&:hover, &:active {
+									color: $smc-blue !important;
+								}
+
+							}
+
+							&.active {
+
+								a {
+									color: $smc-blue !important;
+								}
+
+							}
+
+						}
+
+						.menu-meta {
+							position: absolute;
+							top: 0px;
+							right: 0px;
+							bottom: 0px;
+							width: 250px;
+							background: transparent;
+							white-space: normal;
+							padding: 20px;
+
+							.menu-img {
+								width: 100%;
+								height: 140px;
+								background: url(/images/img-menu-temp.jpg) no-repeat center top;
+								margin-bottom: 10px;
+							}
+
+							h4 {
+								font-size: 1em;
+								color: $smc-blue;
+								text-align: center;
+								margin-bottom: 10px;
+							}
+
+							.additional {
+								position: absolute;
+								top: 220px;
+								right: 0;
+								background-color: $light-gray;
+								padding: 20px;
+								border: solid $gray;
+								border-width: 1px 0 1px 1px;
+
+								h5 {
+									font-size: 1em;
+									color: $smc-blue;
+								}
+
+								li {
+									font-size: 0.9em;
+									margin: 20px 0;
+								}
+
+							}
+
+							&.actuators {
+
+								.menu-img {
+									background: url(/images/img-actuators.jpg) no-repeat center top;
+								}
+
+							}
+
+							&.valves {
+
+								.menu-img {
+									background: url(/images/img-valves.jpg) no-repeat center top;
+								}
+
+							}
+
+							&.airline {
+
+								.menu-img {
+									background: url(/images/img-airline-equipment.jpg) no-repeat center top;
+								}
+
+							}
+
+							&.airprep {
+
+								.menu-img {
+									background: url(/images/img-air-preparation.jpg) no-repeat center top;
+								}
+
+							}
+
+							&.connectors {
+
+								.menu-img {
+									background: url(/images/img-connectors.jpg) no-repeat center top;
+								}
+
+							}
+
+						}
+
+						&.narrow {
+							height: 550px;
+
+							li {
+								width: auto;
+								max-width: 100%;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	#headnav {
+		position: absolute;
+		top: 6px;
+		right: 20px;
+		margin: 0;
+
+		li {
+			display: inline-block;
+
+			a {
+				font-size: 0.7em;
+				text-transform: uppercase;
+				padding: 10px 10px 10px 30px;
+
+				&.language {
+					background-position: left 3px;
+				}
+
+				&.region {
+					background-position: left 2px;
+				}
+
+				&.distributor {
+					background-position: left 2px;
+				}
+
+				&.login {
+					background-color: $smc-orange;
+					background-position: 10px 5px;
+					font-size: 0.8em;
+					font-weight: 600;
+					margin-left: 10px;
+					padding: 9px 10px 8px 40px;
+					@include rounded-corners(5px 5px 0 0);
+
+					&:hover, &:active {
+						color: $white;
+						background-color: darken($smc-orange, 10%);
+						@include transition(background-color 0.24s ease-in-out);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	#footnav {
+		display: none;
+	}
+
+}
+
+/*********************
+FEATURED STYLES
+*********************/
+
+#inner-featured {
+	width: 94%;
+
+	a.arrow {
+		top: 0;
+		height: auto;
+		background: url(/images/temp-arrow-left.png) no-repeat center center;
+
+		&.right {
+			background: url(/images/temp-arrow-right.png) no-repeat center center;
+		}
+
+	}
+
+}
+
+#slider {
+	margin: 0 40px;
+
+	ul.slides > li > div {
+		padding: 0 40px;
+	}
+
+	.flex-viewport {
+		height: 300px;
+	}
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+	img {
+		top: 70px;
+		right: 20px;
+	}
+
+	.orange-bubble {
+		top: 200px;
+		right: 34%;
+	}
+
+}
+
+/*********************
+CONTENT STYLES
+*********************/
+
+#content {
+	padding: 20px 0 40px;
+
+	.wrap {
+		width: 96%;
+	}
+
+	&.home {
+		padding: 20px 0 40px;
+	}
+
+	.table-responsive {
+
+		table {
+
+			th, td {
+				white-space: normal;
+			}
+
+		}
+
+	}
+
+}
+
+#main {
+
+	.intro {
+		padding: 0;
+
+		hr {
+			display: block;
+		}
+
+	}
+
+	.description-text {
+		width: 60%;
+	}
+
+	&.home {
+
+		a.blue-btn:hover, a.blue-btn:active {
+			background-color: $smc-orange;
+		}
+
+	}
+
+	&.product {
+		float: right;
+
+		h1 {
+			width: 60%;
+		}
+
+		img {
+
+			&.product-image {
+				width: 36%;
+				max-width: 300px;
+			}
+
+		}
+
+	}
+
+	&.interior {
+		float: right;
+	}
+
+	&.single-category {
+		float: right;
+	}
+
+	&.category {
+		margin: 0;
+		padding: 20px;
+		border-top: solid 1px $gray;
+	}
+
+}
+
+#config {
+
+	.table-responsive {
+		max-width: 1090px;
+		margin: 0 auto;
+	}
+
+	table {
+		position: relative;
+	}
+
+	#status_img {
+		top: 0;
+	}
+
+}
+
+#content-blocks {
+	overflow: hidden;
+	margin: 0 2%;
+	border: solid 1px $gray;
+
+	.section {
+		float: left;
+		width: 33.3333%;
+		padding: 20px;
+		border: none;
+		border-right: solid 1px $gray;
+
+		&.last-section {
+			float: right;
+			border: none;
+		}
+
+		> div {
+			padding: 0;
+		}
+
+		h2 {
+			background: none;
+			color: $smc-blue;
+			margin-bottom: 20px;
+			padding: 0;
+			cursor: auto;
+		}
+
+		p {
+			font-size: 0.9em;
+		}
+
+	}
+
+}
+
+#productTabs {
+	margin: 20px 0 0;
+	padding-top: 20px;
+	border-top: solid 1px $gray;
+
+	.product-block {
+		margin-bottom: 20px;
+		padding: 0;
+		border: none;
+		border-bottom: solid 1px $gray;
+
+		h2 {
+			background: none;
+			font-size: 1.2em;
+			color: $smc-blue;
+			margin: 0 0 20px;
+			padding: 0;
+			cursor: auto;
+		}
+
+		> div {
+			padding: 0;
+		}
+
+	}
+
+	#downloads {
+		margin-bottom: 20px;
+		overflow: hidden;
+
+		.col {
+			float: left;
+			width: 33.3333%;
+			padding: 0 10px;
+
+			&.right {
+				float: right;
+			}
+
+		}
+
+		.blue-btn {
+			max-width: 300px;
+			font-size: 0.8em;
+		}
+
+	}
+
+	#related {
+		clear: both;
+		margin-bottom: 20px;
+		border-bottom: none;
+	}
+
+}
+
+#catTabs {
+	border: none;
+
+	.cat-block {
+		float: left;
+		width: 25%;
+		padding: 10px;
+		border: none;
+		overflow: visible;
+
+		> div {
+			padding: 0;
+		}
+
+		&:nth-child(4n+1) {
+			clear: left;
+		}
+
+		h2 {
+			display: none;
+		}
+
+		h3 {
+			float: none;
+			width: 100%;
+			font-size: 1em;
+		}
+
+		ul.cat-list {
+			float: none;
+
+			li {
+				font-size: 0.8em;
+			}
+
+		}
+
+	}
+
+	.cat-image {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	ul.cat-list {
+		float: none;
+		width: 100%;
+	}
+
+}
+
+#relatedTabs {
+
+	.tabnav {
+		display: block;
+		list-style: none;
+		overflow: hidden;
+		@include css-gradient($light-gray, $gray);
+		margin: 0px;
+		padding: 0;
+		@include rounded-corners(4px 4px 0 0);
+		border: solid 1px $gray;
+		border-bottom: none;
+
+		li {
+			float: left;
+			margin: 0;
+
+			a {
+				display: block;
+				font-family: $proxima;
+				font-size: 0.9em;
+				font-weight: 600;
+				color: $text-color;
+				padding: 12px 10px;
+				border-right: solid 1px $gray;
+				border-bottom: none;
+			}
+
+			&.ui-state-active {
+
+				a {
+					background: $white;
+					color: $smc-blue;
+				}
+
+			}
+
+		}
+
+	}
+
+	.ui-tabs-panel {
+		padding: 20px;
+		border: solid $gray;
+		border-width: 0 1px 1px;
+		@include rounded-corners(0 0 4px 4px);
+	}
+
+	ul.prod-list {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+#sidebar {
+	padding: 0 20px 20px 0;
+
+	.col {
+		float: none;
+		width: 100%;
+
+		hr {
+			display: block;
+		}
+
+		&.right {
+			float: none;
+		}
+
+	}
+
+	.subfilter {
+		width: 62%;
+	}
+
+	.icon-btn {
+		font-size: 0.8em;
+		padding: 15px 10px 12px 50px;
+	}
+
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+#footer {
+
+	ul#quick-list {
+		width: 70%;
+	}
+
+}
+
+#sub-footer {
+
+	nav {
+		display: block;
+		float: left;
+		margin-top: -3px;
+
+		li {
+			display: inline-block;
+			font-size: 0.8em;
+			margin: 0 10px 0 0;
+		}
+
+	}
+
+	p.copyright {
+		font-size: 0.8em;
+		float: right;
+		margin: 0;
+	}
+
+}
+
+/*********************
+MISC STYLES
+*********************/
+
+.no-desktop {
+	display: none;
+}

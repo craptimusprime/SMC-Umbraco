@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/InteriorFilterMaster.master" AutoEventWireup="true" CodeFile="~/Masterpages/SubCategoryPage.master.cs" Inherits="Masterpages_SubCategoryPage" %>
+
+<%@ Register Src="~/UserControls/uc_Breadcrumbs.ascx" TagPrefix="uc1" TagName="uc_Breadcrumbs" %>
+
+
+<asp:Content ContentPlaceHolderID="cpMain" runat="server">
+
+    <div id="main" class="single-category m-all t-all d-3of4 cf" role="main">
+        <uc1:uc_Breadcrumbs runat="server" ID="uc_Breadcrumbs" />
+
+        <h1><asp:Literal ID="litHeader" runat="server"></asp:Literal></h1>
+
+        <div id="categories">
+
+            <asp:Literal ID="litCategoryItems" runat="server"></asp:Literal>
+
+        </div>
+    </div>
+
+</asp:Content>

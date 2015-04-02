@@ -1,0 +1,106 @@
+/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: Desktop Stylesheet
+******************************************************************/
+
+/*********************
+CONTENT STYLES
+*********************/
+
+#config {
+
+	legend {
+		font-size: 1.2em;
+	}
+
+	#cpn_state {
+		font-size: 1em;
+	}
+
+	table {
+
+		table {
+
+			td {
+				font-size: 1.1em;
+			}
+
+		}
+
+	}
+
+}
+
+#productTabs {
+
+	#downloads {
+
+		.blue-btn {
+			font-size: 0.9em;
+		}
+
+		.download {
+			background-size: 24px;
+		}
+
+		.pdf {
+			background-size: 24px;
+		}
+
+		.favs {
+			background-size: 24px;
+		}
+
+	}
+
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+
+	.icon-btn {
+
+		i {
+
+			&.checkmark {
+				background-size: 24px;
+			}
+
+			&.question-mark {
+				background-size: 24px;
+			}
+
+			&.location {
+				background-size: 24px;
+			}
+
+			&.distributor {
+				background-size: 24px;
+			}
+
+			&.etools {
+				background-size: 24px;
+			}
+
+			&.favs {
+				background-size: 24px;
+			}
+
+		}
+
+	}
+}
+
+#sidebar {
+
+	.icon-btn {
+		font-size: 0.9em;
+		padding: 14px 10px 12px 50px;
+	}
+
+}

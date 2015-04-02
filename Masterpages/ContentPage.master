@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="cpBody" runat="server">
+
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+            <div id="main" class="interior m-all t-all d-3of4 cf" role="main">
+
+                <div id="article" class="m-all t-2of3 d-3of4 cf">
+
+                    <%= umbracoHelper.Field("contentPageBody").ToHtmlString() %>
+
+                </div>
+
+                <div id="aside" class="m-all t-1of3 d-1of4 cf">
+
+                    <h2><%= umbracoHelper.Field("contentPageSideBarHeader") %></h2>
+
+                    <%= umbracoHelper.Field("contentPageSideBarContent").ToHtmlString() %>
+
+                </div>
+
+            </div>
+
+            <div id="sidebar" class="sidebar m-all t-all d-1of4 cf" role="complementary">
+
+                <div class="col left">
+
+                    <div id="sidebar-nav">
+
+                        <h2>Company</h2>
+                        <ul>
+                            <li class="active-category"><a href="/company/">About SMC</a></li>
+                            <li><a href="/company/global-vision/">Global Vision</a></li>
+                            <li><a href="/company/engineering/">Engineering</a></li>
+                            <li><a href="/company/technical-centers/">Technical Centers</a></li>
+                            <li><a href="/company/sales-network/">Sales Network</a></li>
+                            <li><a href="/company/global-production/">Global Production</a></li>
+                            <li><a href="/company/quality/">Quality</a></li>
+                            <li><a href="/company/environment/">Environment</a></li>
+                            <li><a href="/company/terms-conditions/">Terms &amp; Conditions</a></li>
+                            <li><a href="/company/careers/">Careers</a></li>
+                        </ul>
+
+                    </div>
+
+                    <%--<h2>Filter Products</h2>
+                    <form>
+                        <select class="filter"></select>
+                        <select class="subfilter"></select>
+                        <input type="submit" value="Filter" />
+                    </form>--%>
+
+                    <hr />
+
+                </div>
+
+                <div class="col right">
+
+                    <a class="blue-btn icon-btn" href="/contact/distributor-locator/"><i class="distributor"></i>Locate a Distributor</a>
+                    <a class="blue-btn icon-btn" href="/help-support/etools/"><i class="etools"></i>Access eTools</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>

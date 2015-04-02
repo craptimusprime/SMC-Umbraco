@@ -1,0 +1,194 @@
+/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: 481px and Up Stylesheet
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+#sitewrap {
+
+	&.sticky {
+		padding-top: 270px;
+	}
+
+}
+
+/*********************
+FEATURED STYLES
+*********************/
+
+#slider {
+
+	h2 {
+		font-size: 2.5em;
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+
+	img {
+		float: right;
+		width: 220px;
+	}
+
+	.orange-btn {
+		font-size: 1em;
+		padding: 14px 40px 12px 20px;
+	}
+
+	.orange-bubble {
+		right: 190px;
+		bottom: 16px;
+	}
+
+}
+
+/*********************
+CONTENT STYLES
+*********************/
+
+#main {
+
+	h1 {
+		font-size: 1.75em;
+	}
+
+	&.home {
+
+		h1 {
+			font-size: 1.75em;
+		}
+
+	}
+
+	p {
+		font-size: 0.9em;
+	}
+
+	img {
+
+		&.product-image {
+			max-width: 240px;
+			margin: 0 0 20px;
+		}
+
+	}
+
+	ul, ol {
+
+		li {
+			font-size: 0.9em;
+		}
+
+	}
+
+	.blue-btn {
+		font-size: 1em;
+		padding: 14px 40px 12px 20px;
+	}
+
+}
+
+#config {
+
+	table {
+
+		table {
+
+			tr {
+
+			}
+
+			td {
+
+				&:nth-child(9) {
+					clear: none;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+#productTabs, #catTabs {
+
+	.product-block, .cat-block {
+
+		h2 {
+			background-position: 7% -50px;
+			padding: 14px 5% 14px 12%;
+
+			&.ui-state-active {
+				background-position: 7% 0;
+			}
+
+		}
+
+		p {
+			font-size: 0.9em;
+		}
+
+	}
+
+}
+
+#downloads {
+
+	.icon-btn {
+		min-height: 40px;
+		margin: 20px 0;
+		padding: 13px 10px 11px 50px;
+
+		i {
+			height: 40px;
+		}
+
+	}
+
+}
+
+#content-blocks {
+
+	.section {
+
+		p {
+			font-size: 1em;
+		}
+
+	}
+
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+#sidebar {
+
+	.subfilter {
+		width: 73%;
+	}
+
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+#footer {
+
+	img.etech {
+		margin: 0 60px 0 0;
+	}
+
+	img.truste {
+		margin: 10px 0 0 60px;
+	}
+
+}

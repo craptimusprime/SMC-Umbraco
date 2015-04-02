@@ -1,0 +1,573 @@
+/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+#container {
+
+	&.dropdown {
+		padding-bottom: 250px;
+	}
+
+}
+
+.wrap {
+	width: 94%;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+#header {
+
+	#search {
+
+		form {
+			width: 91%;
+		}
+
+	}
+
+}
+
+/*********************
+FEATURED STYLES
+*********************/
+
+#inner-featured {
+
+	a.arrow {
+		top: 0;
+		height: auto;
+	}
+
+}
+
+#slider {
+	padding: 20px 0;
+
+	ul.slides > li > div {
+		padding: 0 60px;
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	h2 {
+		width: 58%;
+	}
+
+	img {
+		margin-top: -30px;
+		right: 40px;
+	}
+
+	.orange-bubble {
+		top: 200px;
+		right: 36%;
+		width: 64px;
+		height: 64px;
+		font-size: 1em;
+		padding: 22px 0;
+	}
+
+	.orange-btn {
+		float: left;
+		clear: left;
+	}
+
+}
+
+/*********************
+CONTENT STYLES
+*********************/
+
+#content {
+	padding: 20px 0 40px;
+
+	.wrap {
+		width: 94%;
+	}
+
+	&.home {
+		padding: 20px 0 0;
+
+		.wrap {
+			width: 94%;
+		}
+
+	}
+
+}
+
+#inner-content {
+	width: 94%;
+}
+
+#main {
+	position: relative;
+	padding: 20px;
+	border-width: 1px;
+
+	.intro {
+		padding: 20px 3% 0;
+	}
+
+	p {
+		font-size: 0.9em;
+	}
+
+	&.home {
+		float: left;
+		padding: 0 40px 0 0;
+		border: none;
+	}
+
+	.description-btn {
+		display: none;
+	}
+
+	.description-text {
+		display: block;
+		float: left;
+		width: 64%;
+		margin-bottom: 20px;
+	}
+
+	&.single-category {
+
+		.cat-image {
+			float: right;
+			margin-left: 40px;
+		}
+
+	}
+
+	&.product {
+
+		h1 {
+			float: left;
+			width: 64%;
+		}
+
+		img {
+
+			&.product-image {
+				float: right;
+				width: 30%;
+			}
+
+		}
+
+	}
+
+}
+
+#config {
+	margin: 0 0 20px;
+	overflow: hidden;
+	clear: both;
+
+	legend {
+		position: absolute;
+		margin: 0;
+	}
+
+	h2 {
+
+	}
+
+	table {
+
+		table {
+			display: table;
+			margin: 15px 0 0;
+
+			tbody {
+				display: table-row-group;
+			}
+
+			tr {
+				display: table-row;
+			}
+
+			td {
+				display: table-cell;
+				font-size: 0.9em;
+				padding: 4px;
+			}
+
+		}
+
+	}
+
+	#status_img {
+		top: 13px;
+		right: 20px;
+		bottom: auto;
+	}
+
+	#cpn_state {
+		position: absolute;
+		right: 60px;
+		padding-bottom: 15px;
+	}
+
+	.reset_btn {
+
+	}
+
+}
+
+#productTabs, #catTabs {
+	margin: 20px -3% 0;
+	border-bottom: none;
+
+	.product-block, .cat-block {
+		margin: 0;
+		padding: 0;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		h2 {
+			background-position: 3% -50px;
+			padding: 14px 3% 14px 6%;
+
+			&.ui-state-active {
+				background-position: 3% 0;
+			}
+
+		}
+
+		> div {
+			padding: 0 3%;
+		}
+
+	}
+
+}
+
+#catTabs {
+	margin: 0;
+
+	.cat-block {
+		overflow: hidden;
+	}
+
+	.cat-image {
+		float: left;
+		width: 50%;
+		max-width: 300px;
+		margin-right: 20px;
+	}
+
+	h3 {
+		float: left;
+		width: 50%;
+	}
+
+	ul.cat-list {
+		float: left;
+		width: 50%;
+	}
+
+}
+
+#relatedTabs {
+
+	ul.prod-list {
+
+		li {
+			float: left;
+			width: 32%;
+
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+
+			&:nth-child(3n+1) {
+				clear: left;
+			}
+
+		}
+
+	}
+
+}
+
+#content-blocks {
+
+	.section {
+
+		h2 {
+			background-position: 3% -50px;
+			padding: 14px 3% 14px 6%;
+
+			&.ui-state-active {
+				background-position: 3% 0;
+			}
+
+		}
+
+		img {
+			max-width: 360px;
+		}
+
+		p {
+			font-size: 0.9em;
+		}
+
+	}
+
+}
+
+#options {
+	clear: both;
+
+	#table-options {
+		display: table;
+		border: none;
+
+		tbody {
+			display: block;
+		}
+
+		tr {
+			display: table-row;
+			width: auto;
+
+			&:first-child {
+				display: block;
+
+				td {
+					display: inline-block;
+					padding: 0 0 20px;
+
+					&:first-child {
+						display: none;
+					}
+
+				}
+
+			}
+
+			&:nth-child(even) {
+				background-color: $light-gray !important;
+			}
+
+			&:last-child {
+				background-color: transparent !important;
+			}
+
+		}
+
+		td {
+			font-size: 0.8em;
+			padding: 8px;
+
+			&.option-label {
+				display: table-cell;
+				width: 25%;
+				white-space: normal;
+			}
+
+			&.option-selection {
+
+			}
+
+			&.option-status {
+				padding: 16px 8px 8px;
+			}
+
+		}
+
+		img {
+			max-width: inherit;
+		}
+
+		select {
+			font-size: 1em;
+			margin: 0;
+		}
+
+	}
+
+	h5 {
+		margin-left: 25%;
+	}
+
+	input.overlay {
+		width: 80%;
+	}
+
+}
+
+#categories {
+
+	.category-item {
+		overflow: hidden;
+	}
+
+	.category-img {
+		float: left;
+		width: 40%;
+		margin-bottom: 20px;
+
+		&.sub {
+			width: 150px;
+		}
+
+	}
+
+	.cat-content {
+		float: right;
+		width: 60%;
+		padding-left: 20px;
+
+		&.sub {
+			width: 77%;
+		}
+
+	}
+
+}
+
+/*********************
+JVECTOR MAP STYLES
+*********************/
+
+#world-map {
+	height: 560px;
+}
+
+#map-navigation {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+#sidebar {
+	padding: 40px 3% 20px;
+	overflow: hidden;
+
+	.icon-btn {
+		font-size: 0.9em;
+		padding: 14px 10px 12px 50px;
+	}
+
+	.col {
+		float: left;
+		width: 46%;
+
+		hr {
+			display: none;
+		}
+
+		&.right {
+			float: right;
+		}
+
+	}
+
+	.subfilter {
+		width: 45%;
+	}
+
+}
+
+#sidebar-home {
+
+	.icon-btn {
+		font-size: 0.9em;
+		padding: 14px 10px 12px 50px;
+	}
+
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+#footer {
+	padding: 30px 0;
+
+	button.quick-links {
+		display: none;
+	}
+
+	ul#quick-list {
+		display: block;
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 66%;
+		float: left;
+		border: none;
+
+		li {
+			display: inline-block;
+			border: none;
+
+			a {
+				font-size: 0.8em;
+
+				&:hover, &:active {
+					background-color: transparent;
+				}
+
+			}
+
+		}
+
+	}
+
+	ul.social-links {
+		position: relative;
+		float: right;
+		width: 240px;
+		margin: 0 0 20px;
+		clear: none;
+
+	}
+
+	img.etech {
+		margin: 0;
+		clear: right;
+	}
+
+	img.truste {
+		float: right;
+		margin: 10px 20px 0 0;
+	}
+
+}
+
+#sub-footer {
+
+	p.copyright {
+
+		span {
+			margin-right: 20px;
+		}
+
+		br {
+			display: none;
+		}
+
+	}
+
+}

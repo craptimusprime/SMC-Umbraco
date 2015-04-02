@@ -1,0 +1,286 @@
+/******************************************************************
+Site Name: SMC USA
+Author: DH Web
+
+Stylesheet: Super Large Monitor Stylesheet
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	max-width: 1560px;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#nav-container {
+
+	#mainnav {
+
+		li {
+
+			a {
+				padding: 15px 20px 14px
+			}
+
+			ul.children.last {
+				margin: 0;
+			}
+
+			&.dropdown {
+
+				a {
+					padding: 15px 40px 14px 20px
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+/*********************
+FEATURED STYLES
+*********************/
+
+#inner-featured {
+
+	a.arrow.left {
+		left: auto;
+		right: 60%;
+		margin-right: 40px;
+	}
+
+}
+
+#slider {
+	float: right;
+	max-width: 100%;
+	height: 335px;
+	width: 60%;
+
+	img {
+		top: 100px;
+		right: 40px;
+		width: 38%
+	}
+
+	.orange-bubble {
+		top: 230px;
+	}
+
+}
+
+/*********************
+CONTENT STYLES
+*********************/
+
+#content {
+	overflow: visible;
+}
+
+#inner-content {
+	position: relative;
+}
+
+#main {
+	width: 75%;
+	padding: 30px 40px;
+
+	&.home {
+		width: 34%;
+		margin-top: -315px;
+		padding: 0 40px 0 0;
+
+		h1 {
+			font-size: 1.5em;
+			color: $white;
+		}
+
+		p {
+			font-size: 0.9em;
+			color: $white;
+		}
+
+		a {
+			color: $white;
+
+			&:hover, &:active {
+				color: $smc-orange;
+			}
+
+		}
+
+	}
+
+	&.category {
+		float: none;
+		width: 100%;
+	}
+
+}
+
+#config {
+
+	#cpn_state {
+		margin-left: 0;
+	}
+
+}
+
+#catTabs {
+
+	.cat-block {
+		width: 16.6666%;
+
+		&:nth-child(4n+1) {
+			clear: none;
+		}
+
+		&:nth-child(6n+1) {
+			clear: left;
+		}
+
+	}
+
+	.cat-image {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	ul.cat-list {
+		float: none;
+		width: 100%;
+	}
+
+}
+
+#relatedTabs {
+
+	.tabnav {
+
+		li {
+
+			a {
+				font-size: 1em;
+				padding: 12px 14px;
+			}
+
+		}
+
+	}
+
+	ul.prod-list {
+
+		li {
+			float: left;
+			width: 20%;
+
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+
+			&:nth-child(3n+1) {
+				clear: none;
+			}
+
+			&:nth-child(5n+1) {
+				clear: left;
+			}
+
+		}
+
+	}
+
+}
+
+.block-wrap {
+	width: 96%;
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+#content-blocks {
+	margin: 0 28% 0 0;
+}
+
+#options {
+
+	select, input {
+		max-width: 100%;
+	}
+
+	input.overlay {
+		max-width: 540px;
+		width: 64%;
+	}
+
+}
+
+#categories {
+
+	.category-img {
+		width: 30%;
+		max-width: 300px;
+	}
+
+	.cat-content {
+		width: 70%;
+
+		&.sub {
+			width: 81%;
+		}
+
+	}
+
+}
+
+/*********************
+JVECTOR MAP STYLES
+*********************/
+
+#world-map {
+	height: 600px;
+}
+
+#map-navigation {
+	right: 40px;
+}
+
+/*********************
+SIDEBAR STYLES
+*********************/
+
+.sidebar {
+
+	.icon-btn {
+
+		padding: 18px 5px 16px 50px;
+	}
+
+}
+
+#sidebar {
+	width: 25%;
+	padding: 0 40px 30px 0;
+
+	.subfilter {
+		width: 66%;
+	}
+
+}
+
+#sidebar-home {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	width: 25%;
+}

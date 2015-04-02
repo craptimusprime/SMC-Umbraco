@@ -1,0 +1,579 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" CodeFile="~/Masterpages/Master.master.cs" Inherits="Masterpages_Master" %>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" ID="Content1" runat="server">
+
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <!doctype html>
+
+    <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+    <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+    <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html lang="en" class="no-js">
+    <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Google Chrome Frame for IE -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>SMC Corporation – Air Cylinders, Solenoid Valves, and Pneumatics</title>
+
+        <!-- mobile meta (hooray!) -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+        <link rel="apple-touch-icon" href="/apple-icon-touch.png">
+
+        <link rel="icon" href="/favicon.png">
+        <!--[if IE]>
+			<link rel="shortcut icon" href="/favicon.ico">
+		<![endif]-->
+        <!--// or, set /favicon.ico for IE10 win -->
+        <meta name="msapplication-TileColor" content="#f01d4f">
+        <meta name="msapplication-TileImage" content="/win8-tile-icon.png">
+
+        <!-- typekit fonts-->
+        <script type="text/javascript" src="//use.typekit.net/rls3juj.js"></script>
+        <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+
+        <!-- css links -->
+        <link rel="stylesheet" id="stylesheet-css" href="/Css/smcStyle.css" type="text/css" media="all">
+        <link href="/Css/tinyMCE-Custom.css" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 9]>
+		<link rel="stylesheet" id="ie-only-css" href="/css/smcIE.css" type="text/css" media="all" />
+		<![endif]-->
+
+        <!-- modernizr and jquery js -->
+        <script type="text/javascript" src="/scripts/modernizr.custom.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+
+        <asp:ContentPlaceHolder ID="cpHead" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+
+    <body>
+
+        <div id="sitewrap">
+
+            <div id="nav-container">
+
+                <div class="wrap">
+
+                    <a href="/" rel="nofollow"><img class="logo" src="/images/logo-smc-white.png" title="SMC" alt="SMC Logo" /></a>
+
+                    <nav id="mainnav" role="navigation">
+
+                        <li><a href="/">Home</a></li>
+                        <li class="dropdown"><a href="">Products</a>
+                            <ul class="children">
+
+                                <li><a href="/products/">Overview</a></li>
+
+                                <li class="dropdown"><a href="/products/Actuators/">Actuators</a>
+                                    <ul class="subchildren actuators">
+                                        <img class="hero" src="/images/menu-air-cylinders-hero.jpg" alt="Air Cylinder Hero Image" />
+                                        <h3>Actuators</h3>
+                                        <li><a href="/products/Actuators/Linear-Actuators~53351">Linear Actuators</a></li>
+                                        <li><a href="/products/Actuators/Grippers-Escapements~20234">Grippers &amp; Escapements</a></li>
+                                        <li><a href="/products/Actuators/Guided-Actuators~19962">Guided Actuators</a></li>
+                                        <li><a href="/products/Actuators/Rotary-Actuators~20108">Rotary Actuators</a></li>
+                                        <li><a href="/products/Actuators/Rodless-Actuators~20740">Rodless Actuators</a></li>
+                                        <li><a href="/products/Actuators/Specialty-Actuators~20386">Specialty Actuators</a></li>
+                                        <li><a href="/products/Actuators/Actuator-Accessories~20666">Actuator Accessories</a></li>
+                                        <div class="menu-meta actuators">
+                                            <div class="menu-img"></div>
+                                            <h4>Actuators</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Directional-Control-Valves/">Directional Control Valves</a>
+                                    <ul class="subchildren valves">
+                                        <img class="hero" src="/images/menu-control-valves-hero.jpg" alt="Directional Control Valves Hero Image" />
+                                        <h3>Directional Control Valves</h3>
+                                        <li><a href="/products/Directional-Control-Valves/4--5-Port-Pilot-Solenoid~27518">Pilot Operated 4/5 Port Solenoid Valves</a></li>
+                                        <li><a href="/products/Directional-Control-Valves/3-Port-Pilot-Solenoid~27250">Pilot Operated 3 Port Solenoid Valves</a></li>
+                                        <li><a href="/products/Directional-Control-Valves/Direct-Operated-Solenoid~27132">Direct Operated 3/4/5 Port Solenoid Valves</a></li>
+                                        <li><a href="/products/Directional-Control-Valves/Fieldbus-System~38806">Reduced-wiring Fieldbus System</a></li>
+                                        <li><a href="/products/Directional-Control-Valves/Air-Operated~28608">Air Operated Valves</a></li>
+                                        <li><a href="/products/Directional-Control-Valves/Mechanical--Hand-Operated~28728">Mechanical Valves/Hand Valves</a></li>
+                                        <li><a href="/products/Directional-Control-Valves/ISO-Valves~128661">ISO Valves</a></li>
+                                        <div class="menu-meta valves">
+                                            <div class="menu-img"></div>
+                                            <h4>Directional Control Valves</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Airline-Equipment/">Airline Equipment</a>
+                                    <ul class="subchildren airline">
+                                        <img class="hero" src="/images/menu-airline-equipment-hero.jpg" alt="Airline Equipment Hero Image" />
+                                        <h3>Airline Equipment</h3>
+                                        <li><a href="/products/Airline-Equipment/Combination-Units~15652">Combination Units</a></li>
+                                        <li><a href="/products/Airline-Equipment/Filters~15732">Filters</a></li>
+                                        <li><a href="/products/Airline-Equipment/Regulators~15822">Regulators</a></li>
+                                        <li><a href="/products/Airline-Equipment/Lubricators~15910">Lubricators</a></li>
+                                        <li><a href="/products/Airline-Equipment/Specialty-Regulators~127718">Specialty Regulators</a></li>
+                                        <li><a href="/products/Airline-Equipment/Pressure-Gauges~127781">Pressure Gauges</a></li>
+                                        <li><a href="/products/Airline-Equipment/Blow-Guns--Nozzles~16064">Blow Guns &amp; Nozzles</a></li>
+                                        <li><a href="/products/Airline-Equipment/Silencers--Exhaust-Cleaners~127801">Silencers &amp; Exhaust Cleaners</a></li>
+                                        <div class="menu-meta airline">
+                                            <div class="menu-img airline"></div>
+                                            <h4>Airline Equipment</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Air-Preparation-Equipment/">Air Preparation Equipment</a>
+                                    <ul class="subchildren airprep">
+                                        <img class="hero" src="/images/menu-air-preparation-hero.jpg" alt="Air Preparation Equipment Hero Image" />
+                                        <h3>Air Preparation Equipment</h3>
+                                        <li><a href="/products/Air-Preparation-Equipment/Air-Dryers~127896">Air Dryers</a></li>
+                                        <li><a href="/products/Air-Preparation-Equipment/Air-Preparation-Filters~127999">Air Preparation Filters</a></li>
+                                        <li><a href="/products/Air-Preparation-Equipment/Aftercoolers~127840">Aftercoolers</a></li>
+                                        <li><a href="/products/Air-Preparation-Equipment/Auto-Drain-Valves~128045">Auto Drain Valves</a></li>
+                                        <div class="menu-meta airprep">
+                                            <div class="menu-img airprep"></div>
+                                            <h4>Air Preparation Equipment</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Connectors/">Connectors</a>
+                                    <ul class="subchildren connectors">
+                                        <img class="hero" src="http://placehold.it/500x140/ffffff/999999" alt="" />
+                                        <h3>Connectors</h3>
+                                        <li><a href="/products/Connectors/Fittings~21907">Fittings</a></li>
+                                        <li><a href="/products/Connectors/Speed-Controllers~22159">Speed Controllers</a></li>
+                                        <li><a href="/products/Connectors/Tubing~22059">Tubing</a></li>
+                                        <li><a href="/products/Connectors/Manifolds~21837">Manifolds</a></li>
+                                        <li><a href="/products/Connectors/Quick-Couplers~127562">Quick Couplers</a></li>
+                                        <li><a href="/products/Connectors/Accessories~21885">Accessories</a></li>
+                                        <div class="menu-meta connectors">
+                                            <div class="menu-img connectors"></div>
+                                            <h4>Connectors</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Electric-Actuators/">Electric Actuators</a>
+                                    <ul class="subchildren electric">
+                                        <h3>Electric Actuators</h3>
+                                        <li><a href="/products/Electric-Actuators/Sliders~125678">Sliders</a></li>
+                                        <li><a href="/products/Electric-Actuators/AC-Servo-Sliders~125698">AC Servo Sliders</a></li>
+                                        <li><a href="/products/Electric-Actuators/Rod-Guided-Rod~125716">Rod &amp; Guided Rod</a></li>
+                                        <li><a href="/products/Electric-Actuators/AC-Servo-Rod~125730">AC Servo Rod</a></li>
+                                        <li><a href="/products/Electric-Actuators/Slide-Tables~125742">Slide Tables</a></li>
+                                        <li><a href="/products/Electric-Actuators/Rotary~125756">Rotary</a></li>
+                                        <li><a href="/products/Electric-Actuators/Grippers~125762">Grippers</a></li>
+                                        <li><a href="/products/Electric-Actuators/Miniature~125772">Miniature</a></li>
+                                        <li><a href="/products/Electric-Actuators/Controllers-Drivers~125783">Controllers &amp; Drivers</a></li>
+                                        <div class="menu-meta electric">
+                                            <div class="menu-img electric"></div>
+                                            <h4>Electric Actuators</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Vacuum-Products/">Vacuum Products</a>
+                                    <ul class="subchildren">
+                                        <h3>Vacuum Products</h3>
+                                        <li><a href="/products/Vacuum-Products/Suction-Cups~29303">Suction Cups</a></li>
+                                        <li><a href="/products/Vacuum-Products/Vacuum-Ejectors~29411">Vacuum Ejectors</a></li>
+                                        <li><a href="/products/Vacuum-Products/Vacuum-Filters~29297">Vacuum Filters</a></li>
+                                        <li><a href="/products/Vacuum-Products/Vacuum-Switches~29361">Vacuum Switches</a></li>
+                                        <li><a href="/products/Vacuum-Products/Vacuum-Regulators~29395">Vacuum Regulators</a></li>
+                                        <li><a href="/products/Vacuum-Products/Noncontact-Pads~37926">Non-contact Pads</a></li>
+                                        <li><a href="/products/Vacuum-Products/Adsorption-Plate~51946">Adsorption Plate</a></li>
+                                        <div class="menu-meta vacuum">
+                                            <div class="menu-img"></div>
+                                            <h4>Vacuum Products</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Sensors-Switches/">Sensors &amp; Switches</a>
+                                    <ul class="subchildren">
+                                        <h3>Sensors &amp; Switches</h3>
+                                        <li><a href="/products/Sensors-Switches/Electronic-Regulator~22816">Electronic Regulator</a></li>
+                                        <li><a href="/products/Sensors-Switches/Pressure-Switches~22836">Pressure Switches</a></li>
+                                        <li><a href="/products/Sensors-Switches/Vacuum-Switches~22944">Vacuum Switches</a></li>
+                                        <li><a href="/products/Sensors-Switches/Flow-Switches~22990">Flow Switches</a></li>
+                                        <li><a href="/products/Sensors-Switches/Positioners~36095">Positioners</a></li>
+                                        <div class="menu-meta">
+                                            <div class="menu-img"></div>
+                                            <h4>Sensors &amp; Switches</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Fluid-Process-Valves/">Fluid Process Valves</a>
+                                    <ul class="subchildren">
+                                        <h3>Fluid Process Valves</h3>
+                                        <li><a href="/products/Fluid-Process-Valves/General-Purpose-Air-Water~127055">General Purpose Air &amp; Water</a></li>
+                                        <li><a href="/products/Fluid-Process-Valves/Oil-High-Temp-Oil~127057">Oil &amp; High Temp. Oil</a></li>
+                                        <li><a href="/products/Fluid-Process-Valves/Steam-Heated-Water~127059">Steam &amp; Heated Water</a></li>
+                                        <li><a href="/products/Fluid-Process-Valves/Specialized-Application~127061">Specialized Application</a></li>
+                                        <li><a href="/products/Fluid-Process-Valves/Chemical-Pure-Water~127063">Chemical &amp; Pure Water</a></li>
+                                        <li><a href="/products/Fluid-Process-Valves/Coolant~127065">Coolant</a></li>
+                                        <li><a href="/products/Fluid-Process-Valves/Dust-Collector~127067">Dust Collector</a></li>
+                                        <div class="menu-meta fp-valves">
+                                            <div class="menu-img"></div>
+                                            <h4>Fluid Process Valves</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Static-Control/">Static Control</a>
+                                    <ul class="subchildren">
+                                        <h3>Static Control</h3>
+                                        <li><a href="/products/Static-Control/Bar-Ionizers~126264">Bar Ionizers</a></li>
+                                        <li><a href="/products/Static-Control/Nozzle-Ionizers~126266">Nozzle Ionizers</a></li>
+                                        <li><a href="/products/Static-Control/Fan-Ionizers~126268">Fan Ionizers</a></li>
+                                        <li><a href="/products/Static-Control/Sensors~126270">Sensors</a></li>
+                                        <div class="menu-meta static">
+                                            <div class="menu-img"></div>
+                                            <h4>Static Control</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Temperature-Control/">Temperature Control</a>
+                                    <ul class="subchildren">
+                                        <h3>Temperature Control</h3>
+                                        <li><a href="/products/Temperature-Control/General-Use-Compact-Chiller~126798">General Use Compact Chiller</a></li>
+                                        <li><a href="/products/Temperature-Control/High-Capacity-Chiller~126800">High Capacity Chiller</a></li>
+                                        <li><a href="/products/Temperature-Control/High-Capacity-Heat-Exchanger~126806">High Capacity Heat Exchanger</a></li>
+                                        <li><a href="/products/Temperature-Control/High-Technology-Chiller~126804">High Technology Chiller</a></li>
+                                        <li><a href="/products/Temperature-Control/Economy-High-Capacity-Chiller~126802">Economy High Capacity Chiller</a></li>
+                                        <li><a href="/products/Temperature-Control/Circulating-Bath~126808">Circulating Bath</a></li>
+                                        <li><a href="/products/Temperature-Control/Benchtop-Precision-Chiller~126852">Benchtop Precision Chiller</a></li>
+                                        <li><a href="/products/Temperature-Control/Benchtop-Chemical-Chiller~126850">Benchtop Chemical Chiller</a></li>
+                                        <div class="menu-meta temp-control">
+                                            <div class="menu-img"></div>
+                                            <h4>Temperature Control</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="/products/Specialty-Equipment/">Specialty Equipment</a>
+                                    <ul class="subchildren">
+                                        <h3>Specialty Equipment</h3>
+                                        <li><a href="/products/Specialty-Equipment/Clean-Room-Products~23399">Clean Room Products</a></li>
+                                        <li><a href="/products/Specialty-Equipment/High-Purity-Products~23473">High Purity Products</a></li>
+                                        <li><a href="/products/Specialty-Equipment/High-Vacuum-Products~23443">High Vacuum Products</a></li>
+                                        <li><a href="/products/Specialty-Equipment/Process-Pumps~23423">Process Pumps</a></li>
+                                        <li><a href="/products/Specialty-Equipment/Process-Valves~87847">Process Valves</a></li>
+                                        <li><a href="/products/Specialty-Equipment/Industrial-Filters~45236">Industrial Filters</a></li>
+                                        <div class="menu-meta specialty">
+                                            <div class="menu-img"></div>
+                                            <h4>Specialty Equipment</h4>
+                                            <div class="additional">
+                                                <h5>Additional Content</h5>
+                                                <ul>
+                                                    <li><a class="no-style" href="#">Instruction Manuals</a></li>
+                                                    <li><a class="no-style" href="#">Engineered Solutions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="/cad-models/">CAD Models</a></li>
+                        <li class="dropdown"><a href="/industries/">Industries</a>
+                            <ul class="children">
+                                <li><a href="/industries/automotive/">Automotive</a></li>
+                                <li><a href="/industries/semiconductor/">Semiconductor</a></li>
+                                <li><a href="/industries/food-packaging/">Food &amp; Packaging</a></li>
+                                <li><a href="/industries/natural-resource/">Natural Resource</a></li>
+                                <li><a href="/industries/life-science/">Life Science</a></li>
+                                <li><a href="/industries/machine-tool/">Machine Tool</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/help-support/">Help &amp; Support</a>
+                            <ul class="children">
+                                <li><a href="/help-support/">Contact Help &amp; Support</a></li>
+                                <li class="dropdown"><a href="/help-support/instruction-manuals/">Instruction Manuals</a>
+                                    <ul class="subchildren narrow">
+                                        <h3>Instruction Manuals</h3>
+                                        <li><a href="/help-support/instruction-manuals/directional-control-valves/">Directional Control Valves</a></li>
+                                        <li><a href="/help-support/instruction-manuals/fieldbus-and-serial-transmission-system/">Fieldbus and Serial Transmission System</a></li>
+                                        <li><a href="/help-support/instruction-manuals/air-cylinders/">Air Cylinders</a></li>
+                                        <li><a href="/help-support/instruction-manuals/vacuum-equipment/">Vacuum Equipment</a></li>
+                                        <li><a href="/help-support/instruction-manuals/air-preparation-equipment/">Air Preparation Equipment</a></li>
+                                        <li><a href="/help-support/instruction-manuals/pressure-control-equipment/">Pressure Control Equipment</a></li>
+                                        <li><a href="/help-support/instruction-manuals/silencers-pressure-gauges/">Silencers &amp; Pressure Gauges</a></li>
+                                        <li><a href="/help-support/instruction-manuals/switches-sensors/">Switches &amp; Sensors</a></li>
+                                        <li><a href="/help-support/instruction-manuals/static-electricity-elimination-equipment/">Static Electricity Elimination Equipment</a></li>
+                                        <li><a href="/help-support/instruction-manuals/process-pumps-hyper-fittings/">Process Pumps &amp; Hyper Fittings</a></li>
+                                        <li><a href="/help-support/instruction-manuals/process-valves/">Process Valves</a></li>
+                                        <li><a href="/help-support/instruction-manuals/temperature-control-equipment/">Temperature Control Equipment</a></li>
+                                        <li><a href="/help-support/instruction-manuals/electric-actuators/">Electric Actuators</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/help-support/maintenance-parts-list/">Maintenance Parts List</a></li>
+                                <li><a href="/help-support/etools/">eTools</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/company/">Company</a>
+                            <ul class="children">
+                                <li><a href="/company/">About SMC</a></li>
+                                <li><a href="/company/global-vision/">Global Vision</a></li>
+                                <li><a href="/company/engineering/">Engineering</a></li>
+                                <li><a href="/company/technical-centers/">Technical Centers</a></li>
+                                <li><a href="/company/sales-network/">Sales Network</a></li>
+                                <li><a href="/company/global-production/">Global Production</a></li>
+                                <li><a href="/company/quality/">Quality</a></li>
+                                <li><a href="/company/environment/">Environment</a></li>
+                                <li><a href="/company/terms-conditions/">Terms &amp; Conditions</a></li>
+                                <li><a href="/company/careers/">Careers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/news-events/">News &amp; Events</a>
+                            <ul class="children">
+                                <li><a href="/news-events/">Recent News</a></li>
+                                <li><a href="/news-events/product-innovations/">Product Innovations</a></li>
+                                <li><a href="/news-events/2015-trade-shows/">2015 Trade Shows</a></li>
+                                <li><a href="/news-events/mini-panels/">Mini Panels</a></li>
+                                <li class="dropdown"><a href="/news-events/training-information/">Training Information</a>
+                                    <ul class="subchildren narrow">
+                                        <h3>Training Information</h3>
+                                        <li><a href="/news-events/training-information/basic-pneumatic-technology/">Basic Pneumatic Technology</a></li>
+                                        <li><a href="/news-events/training-information/energy-saving/">Energy Saving</a></li>
+                                        <li><a href="/news-events/training-information/electro-pneumatic-technology/">Electro-Pneumatic Technology</a></li>
+                                        <li><a href="/news-events/training-information/vacuum-technology/">Vacuum Technology</a></li>
+                                        <li><a href="/news-events/training-information/troubleshooting-pneumatic-systems/">Troubleshooting Pneumatic Systems</a></li>
+                                        <li><a href="/news-events/training-information/pneumatic-circuit-practicum/">Pneumatic Circuit Practicum</a></li>
+                                        <li><a href="/news-events/training-information/training-calendar/">Training Calendar</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/contact/">Contact</a>
+                            <ul class="children last">
+                                <li><a href="/contact/">Contact SMC</a></li>
+                                <li><a href="/contact/distributor-locator/">Distributor Locator</a></li>
+                                <li><a href="/contact/global-contacts/">Global Contacts</a></li>
+                                <li><a href="/contact/customer-service/">Customer Service</a></li>
+                                <li><a href="/contact/chillers-contacts/">Chillers Contacts</a></li>
+                                <li><a href="/contact/dryers-contacts/">Dryers Contacts</a></li>
+                                <li><a href="/contact/contact-by-email/">Contact by Email</a></li>
+                                <li><a href="/contact/frequently-asked-questions/">Frequently Asked Questions</a></li>
+                            </ul>
+                        </li>
+
+                    </nav>
+
+                    <nav id="headnav" class="subnav" role="navigation">
+
+                        <%--<li><a class="language" href="">USA (English)</a></li>--%>
+                        <li><a class="region" href="">Region Selector</a></li>
+                        <li><a class="distributor" href="">Distributor Locator</a></li>
+                        <li><a class="login" href="">Login</a></li>
+
+                    </nav>
+
+                    <nav id="footnav" class="subnav" role="navigation">
+
+                        <li><a href="">Sitemap</a></li>
+                        <li><a href="">eTools</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Feedback</a></li>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div id="container">
+
+                <header id="header" role="banner">
+
+                    <div id="inner-header" class="wrap cf">
+
+                        <div id="menu"></div>
+
+                        <div id="logo" class="h1">
+
+                            <a href="/" rel="nofollow">
+                                <img src="/images/logo-smc.png" title="SMC" alt="SMC Logo" />
+                            </a>
+                            <p class="slogan">Manufacturing Pneumatics Worldwide</p>
+
+                        </div>
+
+                        <a class="login-btn" href="">Login</a>
+
+                        <div id="search">
+
+                            <form method="GET" id="searchForm" action="">
+                                <input type="text" id="s" name="s" value="" />
+                                <input type="submit" id="sbtn" name="submit" value="" />
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <div class="navbar"></div>
+
+                </header>
+
+                <!-- Start Body -->
+                <asp:ContentPlaceHolder ID="cpBody" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- End Body -->
+
+                <footer id="footer" role="contentinfo">
+
+                    <div id="inner-footer" class="wrap cf">
+
+                        <!-- Start Quick Links -->
+                        <button class="quick-links">Quick Links</button>
+                        <ul id="quick-list">
+                            <h4>Quick Links &ndash; Direct to CAD Models</h4>
+
+                            <asp:Literal ID="litQuickLinks" runat="server"></asp:Literal>
+
+                        </ul>
+                        <!-- End Quick Links -->
+
+                        <ul class="social-links">
+                            <li><a class="linkedin" href="https://www.linkedin.com/company/smc" target="_blank"></a></li>
+                            <li><a class="facebook" href="https://www.facebook.com/SMCCorporationofAmerica" target="_blank"></a></li>
+                            <li><a class="twitter" href="https://twitter.com/SMCCorporation" target="_blank"></a></li>
+                            <li><a class="youtube" href="https://www.youtube.com/channel/UCRgflLLtG2zK6uRrZBf5GcQ" target="_blank"></a></li>
+                        </ul>
+
+                        <img class="etech" src="/images/logo-etech.png" title="ETech" alt="ETech Logo" />
+                        <img class="truste" src="/images/truste-seal.png" title="Truste Certified Privacy" alt="Truste Logo" />
+
+                    </div>
+
+                </footer>
+
+                <div id="sub-footer">
+
+                    <div class="wrap cf">
+
+                        <nav role="navigation">
+                            <li><a href="">Sitemap</a></li>
+                            <li><a href="/help-support/etools/">eTools</a></li>
+                            <li><a href="">Terms of Use</a></li>
+                            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="">Feedback</a></li>
+                        </nav>
+
+                        <p class="copyright">
+                            <span>&copy; 2014 SMC Corporation of America</span><br />
+                            <a href="tel:+1-800-762-7621">
+                            1-800-SMC-SMC1<p>
+                        <%--<p class="no-desktop"><a href="">View Desktop Site</a></p>--%>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- all js scripts are loaded here -->
+        <script type="text/javascript" src="/scripts/scripts.js"></script>
+
+    </body>
+
+    </html>
+</asp:Content>

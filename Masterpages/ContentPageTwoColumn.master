@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="cpHead" runat="server">
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cpBody" runat="server">
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+            <div id="main" class="interior m-all t-all d-2of3 cf" role="main">
+
+                <%= umbracoHelper.Field("ContentPageBody").ToHtmlString() %>
+
+            </div>
+
+            <div id="sidebar" class="sidebar m-all t-all d-1of3 cf" role="complementary">
+
+                <div class="col left">
+
+                    <h2><%= umbracoHelper.Field("contentPageSideBarHeader") %></h2>
+
+                    <%= umbracoHelper.Field("contentPageSideBarContent").ToHtmlString() %>
+
+                    <hr />
+
+                </div>
+
+                <div class="col right">
+
+                    <a class="blue-btn icon-btn" href="/contact/distributor-locator/"><i class="distributor"></i>Locate a Distributor</a>
+                    <a class="blue-btn icon-btn" href="/help-support/etools/"><i class="etools"></i>Access eTools</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>

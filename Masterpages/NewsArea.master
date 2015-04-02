@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="cpHead" runat="server">
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="cpBody" runat="server">
+    <%
+        var umbracoHelper = new Umbraco.Web.UmbracoHelper(Umbraco.Web.UmbracoContext.Current);
+    %>
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+            <div id="main" class="interior m-all t-2of3 d-2of3 cf" role="main">
+
+                <%= umbracoHelper.Field("newsareaintroduction").ToHtmlString() %>
+					
+				<umbraco:Macro Alias="NewsList" runat="server" />
+                
+            </div>
+
+            <div id="sidebar" class="sidebar m-all t-1of3 d-1of3 cf" role="complementary">
+					
+				<%--<umbraco:Macro Alias="NewsArchives" runat="server" numberOfItems="5" />--%>
+
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>
